@@ -1,0 +1,22 @@
+html, body{
+  height:100%;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  text-align: center;
+}
+
+.Hamburger-Menu{
+  width: 50%;
+  height: 50%;
+  background-color: beige;
+}
+
+.dropdown ul {
+  list-style-type: none;
+  text-decoration: none;
+}
