@@ -54,6 +54,12 @@ body{
   top: 25%;
   right: 30%;
   display: none;
+  background: #efd2b0;
+  padding: 2%;
+}
+
+#menu-dropdown li a{
+  text-decoration: none;
 }
 
 #menu-close{
