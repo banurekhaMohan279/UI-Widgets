@@ -10,13 +10,34 @@ body{
   text-align: center;
 }
 
-.Hamburger-Menu{
+.UI-Widgets, .Hamburger-Menu{
   width: 50%;
   height: 50%;
   background-color: beige;
   position: relative;
 }
 
+.next-btn {
+  position: absolute;
+  right: 0;
+  text-decoration: none;
+}
+
+.prev-btn{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  text-decoration: none;
+}
+
+/***Home page****/
+.UI-Widgets{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/***Hamburger Menu***/
 #menu-dropdown ul {
   list-style-type: none;
   text-decoration: none;
