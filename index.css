@@ -17,17 +17,19 @@ body{
   position: relative;
 }
 
-.next-btn {
+.next-btn, .prev-btn{
   position: absolute;
-  right: 0;
   text-decoration: none;
+  font-size: 3rem;
+}
+
+.next-btn {
+  right: 0;
 }
 
 .prev-btn{
-  position: absolute;
   left: 0;
   top: 50%;
-  text-decoration: none;
 }
 
 /***Home page****/
