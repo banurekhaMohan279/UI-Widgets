@@ -90,12 +90,17 @@ body{
 
 #lazy-load-list{
   list-style-type: none;
+  display: contents;
 }
 
 .list-item{
   height: 7rem;
 }
 
-.list-item:nth-child(2n+1){
+.list-item:nth-child(odd){
   background-color: grey;
+}
+
+.list-item:nth-child(even){
+  background-color: pink;
 }
