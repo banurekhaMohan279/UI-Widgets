@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1">
+    <title> Lazy Load with IntersectionObserver API</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+      <div id="Lazy-load-area">
+          <h1> Lazy Load </h1>
+          <ul id ="lazy-load-list"></ul>
+          <div id = "loader">Loading...</div>
+      </div>
+
+      <script type ="text/javascript">
+
+        function appendData(){
+            let data = [1,2,3];
+            data.map(item =>{
+              let div = document.createElement('li');
+              div.className = 'list-item';
+              div.innerHTML += item;
+              document.querySelector("#lazy-load-list").append(div);
+            })
+       }
+
+        let options = {
+          root:document.querySelector("#Lazy-load-area"),
+          theshold:1.0
+        }
+
+        const handleObserver = (entries, observer) =>{
+          let target = entries[0];
+          if(target.isIntersecting){
+              console.log("intersecting...")
+              appendData();
+          }
+        }
+
+        const observer = new IntersectionObserver(handleObserver,options);
+
+        let target = document.querySelector("#loader");
+        observer.observe(target);
+
+      </script>
+  </body>
+</html>

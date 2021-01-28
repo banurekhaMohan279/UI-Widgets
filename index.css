@@ -10,7 +10,7 @@ body{
   text-align: center;
 }
 
-.UI-Widgets, .Hamburger-Menu{
+.UI-Widgets, .Hamburger-Menu, #Lazy-load-area{
   width: 50%;
   height: 50%;
   background-color: beige;
@@ -81,4 +81,17 @@ body{
 
 #menu-dropdown:target {
   display: block;
+}
+
+/****LazyLoad****/
+#lazy-load-list{
+  list-style-type: none;
+}
+
+.list-item{
+  height: 5rem;
+}
+
+.list-item:nth-child(2n+1){
+  background-color: grey;
 }
