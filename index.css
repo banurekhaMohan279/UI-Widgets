@@ -35,6 +35,7 @@ body{
 
 .next-btn {
   right: 0;
+  top: 50%;
 }
 
 .prev-btn{
@@ -90,7 +91,7 @@ body{
 
 #lazy-load-list{
   list-style-type: none;
-  display: contents;
+  width: 70%;
 }
 
 .list-item{
