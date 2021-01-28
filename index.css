@@ -84,12 +84,16 @@ body{
 }
 
 /****LazyLoad****/
+#Lazy-load-area{
+  overflow-y: scroll;
+}
+
 #lazy-load-list{
   list-style-type: none;
 }
 
 .list-item{
-  height: 5rem;
+  height: 7rem;
 }
 
 .list-item:nth-child(2n+1){
