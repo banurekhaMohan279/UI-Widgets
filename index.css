@@ -27,6 +27,17 @@ body{
     }
   }
 
+  @keyframes slide-from-top{
+      0%{
+        opacity: 0.3;
+        transform: scaleY(0);
+      },
+      100%{
+        opacity: 1;
+        transform: scaleY(1);
+      }
+    }
+
 .next-btn, .prev-btn{
   position: absolute;
   text-decoration: none;
@@ -66,10 +77,11 @@ body{
 #menu-dropdown{
   position: absolute;
   top: 25%;
-  right: 30%;
+  right: 25%;
   display: none;
   background: #efd2b0;
   padding: 5%;
+  animation: 0.5s slide-from-top;
 }
 
 #menu-dropdown li a{
