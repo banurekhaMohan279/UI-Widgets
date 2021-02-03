@@ -109,6 +109,7 @@ body{
 #lazy-load-list{
   list-style-type: none;
   width: 70%;
+  margin: auto;
 }
 
 .list-item{
@@ -124,16 +125,12 @@ body{
 }
 
 /****btn-popup-container - web Component****/
-.btn-popup-container{
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
 
 .img-placeholder{
   width: 50%;
   position: relative;
   cursor: pointer;
+  margin: auto;
 }
 
 .img-placeholder img{
