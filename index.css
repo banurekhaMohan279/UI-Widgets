@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
 html, body{
   height:100%;
 }
@@ -6,16 +8,17 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #e2dfdf;
+  background-color: #424242;
   text-align: center;
 }
 
 .UI-Widgets, .Hamburger-Menu, #Lazy-load-area,.btn-popup-container{
   width: 50%;
   height: 50%;
-  background-color: #e1bee7;
+  background-color: #fff9c4;
   position: relative;
   animation: 1s slide-in;
+  font-family: 'Open Sans', sans-serif;
 }
 
 @keyframes slide-in{
