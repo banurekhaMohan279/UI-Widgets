@@ -148,3 +148,16 @@ button-popup{
   right: 2%;
   display: none;
 }
+
+/**** Progress Bar ****/
+.progressBar{
+  height: 100px;
+  width: 30px;
+  background: grey;
+}
+
+.progress-icon{
+  width: 1%;
+  height: 100%;
+  background-color: green;
+}
