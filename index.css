@@ -12,7 +12,7 @@ body{
   text-align: center;
 }
 
-.UI-Widgets, .Hamburger-Menu, #Lazy-load-area,.btn-popup-container,.paginate{
+.UI-Widgets, .Hamburger-Menu, #Lazy-load-area,.btn-popup-container,.paginate,.progress-bar-container{
   width: 50%;
   height: 50%;
   background-color: #fff9c4;
@@ -150,9 +150,15 @@ button-popup{
 }
 
 /**** Progress Bar ****/
+.progress-bar-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .progressBar{
-  height: 100px;
-  width: 30px;
+  height: 30px;
+  width: 100px;
   background: grey;
 }
 
