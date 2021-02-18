@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>React Paginate</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <link rel="stylesheet" href="../index.css">
+  </head>
+  <body>
+    <div class = "paginate">
+      <h1 id="root"></h1>
+      <a href = "buttonPopup-WebComp.html" class = "prev-btn"> &larr; </a>
+    </div>
+
+    <script type="text/babel">
+    function Counter(){
+      let [pageCounter, setPageCounter] = React.useState(1);
+      let [data, setData] = React.useState([]);
+
+      const fetchUsers = (pageCounter) =>{
+        fetch(`https://randomuser.me/api?page=${pageCounter}`).
+        then(response => response.json()).
+        then(json => setData( [...data, json.results[0]]))
+      }
+
+      React.useEffect( ()=>{
+        fetchUsers(pageCounter);
+      },[pageCounter]);
+
+      return(
+        <div>
+          <section>
+            <h1> React Paginate </h1>
+            <button onClick = {() => setPageCounter(pageCounter+1)}> Fetch NEXT</button>
+            <ul>
+              {
+                data.map((item,idx) => {
+                  return (
+                    <li key = {idx}>
+                      <img src = {item.picture.thumbnail} alt = {item.picture.thumbnail}/>
+                    </li>)
+                })
+              }
+            </ul>
+          </section>
+        </div>
+      )
+      }
+
+      ReactDOM.render(<Counter/>,document.getElementById("root"));
+
+    </script>
+  </body>
+</html>
