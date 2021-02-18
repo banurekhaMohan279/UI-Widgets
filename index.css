@@ -150,16 +150,12 @@ button-popup{
 }
 
 /**** Progress Bar ****/
-.progress-bar-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .progressBar{
   height: 30px;
   width: 100px;
   background: grey;
+  margin: auto;
 }
 
 .progress-icon{
