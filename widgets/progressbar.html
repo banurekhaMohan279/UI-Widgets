@@ -16,6 +16,23 @@
           <a href = "paginate.html" class = "prev-btn"> &larr; </a>
         </div>
         <div class = 'col-2'>
+          <xmp class = "code-snippet-html">
+            <div class = "progressBar">
+              <div class = "progress-icon"></div>
+            </div>
+            <button onclick = "showprogress(2)"> Start </button>
+          </xmp>
+          <code class = "code-snippet-js">
+            let progressIcon = document.querySelector('.progress-icon');
+            function showprogress(wait){
+              let counter = 1;
+              let timer = setInterval(()=>{
+                  progressIcon.style.width = `${counter}%`;
+                  counter++;
+                  if(counter>=100) clearInterval(timer);
+              },(wait*1000)/100);
+            }
+          </code>
         </div>
     </div>
     <script>
