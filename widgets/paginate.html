@@ -14,9 +14,46 @@
           <h1 id="root"></h1>
           <a href = "buttonPopup-WebComp.html" class = "prev-btn"> &larr; </a>
         </div>
+
         <div class = 'col-2'>
           <a href = "progressbar.html" class = "next-btn"> &rarr; </a>
+          <xmp class = "code-snippet-html">
+            function Counter(){
+              let [pageCounter, setPageCounter] = React.useState(1);
+              let [data, setData] = React.useState([]);
+
+              const fetchUsers = (pageCounter) =>{
+                fetch(`https://randomuser.me/api?page=${pageCounter}`).
+                then(response => response.json()).
+                then(json => setData( [...data, json.results[0]]))
+              }
+
+              React.useEffect( ()=>{
+                fetchUsers(pageCounter);
+              },[pageCounter]);
+
+              return(
+                <div>
+                  <section>
+                    <h1> React Paginate </h1>
+                    <button onClick = {() => setPageCounter(pageCounter+1)}> Fetch NEXT</button>
+                    <ul>
+                      {
+                        data.map((item,idx) => {
+                          return (
+                            <li key = {idx}>
+                              <img src = {item.picture.thumbnail} alt = {item.picture.thumbnail}/>
+                            </li>)
+                        })
+                      }
+                    </ul>
+                  </section>
+                </div>
+              )
+              }
+          </xmp>
         </div>
+
    </div>
 
     <script type="text/babel">
