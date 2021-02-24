@@ -12,13 +12,28 @@ body{
   text-align: center;
 }
 
-.UI-Widgets, .Hamburger-Menu, #Lazy-load-area,.btn-popup-container,.paginate,.progress-bar-container{
-  width: 50%;
-  height: 50%;
+.page-center{
+  display: flex;
   background-color: #fff9c4;
   position: relative;
+  width: 80%;
+  height: 80%;
   animation: 1s slide-in;
   font-family: 'Open Sans', sans-serif;
+}
+
+.col-1,.col-2{
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+
+.col-1{
+  background-color: #fff9c4;
+}
+
+.col-2{
+  background-color: #e0dcb4;
 }
 
 @keyframes slide-in{
