@@ -12,10 +12,45 @@
           <h1> Lazy Load </h1>
           <ul id ="lazy-load-list"></ul>
           <div id = "loader">Loading...</div>
-          <a href = "hamburger-menu.html" class = "prev-btn"> &larr; </a>      
+          <a href = "hamburger-menu.html" class = "prev-btn"> &larr; </a>
       </div>
       <div class = 'col-2'>
         <a href = "buttonPopup-WebComp.html" class = "next-btn"> &rarr; </a>
+        <xmp class = "code-snippet-html">
+          <div id="Lazy-load-area">
+              <h1> Lazy Load </h1>
+              <ul id ="lazy-load-list"></ul>
+              <div id = "loader">Loading...</div>
+          </div>
+        </xmp>
+        <code class = "code-snippet-js">
+          function appendData(){
+              let data = [1,2,3];
+              data.map(item =>{
+                let div = document.createElement('li');
+                div.className = 'list-item';
+                div.innerHTML += item;
+                document.querySelector("#lazy-load-list").append(div);
+              })
+         }
+
+          let options = {
+            root:document.querySelector("#Lazy-load-area"),
+            theshold:1.0
+          }
+
+          const handleObserver = (entries, observer) =>{
+            let target = entries[0];
+            if(target.isIntersecting){
+                setTimeout(()=> appendData(),2000);
+            }
+          }
+
+          const observer = new IntersectionObserver(handleObserver,options);
+
+          let target = document.querySelector("#loader");
+          observer.observe(target);
+        </code>
       </div>
     </div>
 

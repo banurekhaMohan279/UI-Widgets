@@ -32,16 +32,23 @@ body{
   background-color: #fff9c4;
 }
 
-.col-2{
+.col-2{ /* Reference code*/
   background-color: #e0dcb4;
   padding: 0 3%;
+  overflow: scroll;
 }
 
-.code-snippet{
+.code-snippet-html{
   overflow-x: auto;
-  white-space: pre-wrap;
+  white-space: break-spaces;
   font-size: larger;
   color: firebrick;
+}
+
+.code-snippet-js{
+  overflow-x: auto;
+  overflow-y: scroll;
+  white-space: break-spaces;
 }
 
 @keyframes slide-in{
