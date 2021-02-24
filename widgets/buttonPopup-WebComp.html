@@ -24,9 +24,29 @@
             </div>
             <a href = "lazy-load.html" class = "prev-btn"> &larr; </a>
           </div>
+
           <div class = 'col-2'>
             <a href = "paginate.html" class = "next-btn"> &rarr; </a>
+            <xmp class = "code-snippet-html">
+              <div class = "img-placeholder">
+                <img src = "https://picsum.photos/id/1025/500" alt = "Image Placeholder"/>
+                <button-popup></button-popup>
+              </div>
+              
+              .img-placeholder:hover > button-popup{
+                display: block;
+              }
+            </xmp>
+            <code class = "code-snippet-js">
+              class Buttonpopup extends HTMLElement{
+                connectedCallback() {
+                  this.innerHTML = `<button>Click Me!</button>`;
+                }
+              }
+              window.customElements.define('button-popup',Buttonpopup );
+            </code>
           </div>
+
       </div>
   </body>
 </html>
