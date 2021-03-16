@@ -1,5 +1,5 @@
 # UI-Widgets
-A list of common widgets for UI development
+A list of common widgets encountered during UI development
 
 ## [Demo Here](https://banurekhamohan279.github.io/Js-Train-Widgets/)
 
